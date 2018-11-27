@@ -50,7 +50,7 @@ class App extends Component{
             <h1>Todo List</h1>
             <ul>
               {this.state.todos.map((item, index) => {
-                return <li key={index}>{item} <Button onClick={() => {this.remove(item)}} type="remove">X</Button></li>
+                return this.remove(item)
               })}
             </ul>
             <input type="text" value={this.state.todo_item} id="todo_item" placeholder="Digite uma tarefa" onChange={this.handleChange}/>
